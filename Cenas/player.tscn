@@ -1,0 +1,60 @@
+[gd_scene load_steps=11 format=3 uid="uid://qqwx0xktilvr"]
+
+[ext_resource type="Script" uid="uid://dyel4aqvvjjng" path="res://Cenas/player.gd" id="1_a8sqr"]
+[ext_resource type="Texture2D" uid="uid://dmdcgdxsrb1dw" path="res://Material Freeway/Material Freeway/galinha/baixo/sprite_0.png" id="2_5ucro"]
+[ext_resource type="Texture2D" uid="uid://dk6se0try8fau" path="res://Material Freeway/Material Freeway/galinha/baixo/sprite_2.png" id="3_m8d4k"]
+[ext_resource type="Texture2D" uid="uid://b7etposhbi7aa" path="res://Material Freeway/Material Freeway/galinha/baixo/sprite_1.png" id="4_d8ni2"]
+[ext_resource type="Texture2D" uid="uid://vjbrr4741odr" path="res://Material Freeway/Material Freeway/galinha/cima/sprite_0.png" id="5_r7mo0"]
+[ext_resource type="Texture2D" uid="uid://7q6t26acgo1u" path="res://Material Freeway/Material Freeway/galinha/cima/sprite_2.png" id="6_ic6fv"]
+[ext_resource type="Texture2D" uid="uid://qrmynhkqo1m8" path="res://Material Freeway/Material Freeway/galinha/cima/sprite_1.png" id="7_mstbe"]
+[ext_resource type="AudioStream" uid="uid://df1uir3ef7x3b" path="res://Material Freeway/Material Freeway/sons/colide.wav" id="8_rtmnx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_11qbu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5ucro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_m8d4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d8ni2")
+}],
+"loop": true,
+"name": &"baixo",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_r7mo0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ic6fv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_mstbe")
+}],
+"loop": true,
+"name": &"cima",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_24tl7"]
+radius = 15.2971
+
+[node name="player" type="Area2D"]
+script = ExtResource("1_a8sqr")
+
+[node name="animacao" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_11qbu")
+animation = &"cima"
+
+[node name="colisao" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_24tl7")
+
+[node name="audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_rtmnx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -39,6 +39,10 @@ func _process(delta: float) -> void:
 		$animacao.play("cima")
 	else:
 		$animacao.stop()
+	if velocity.x > 0:
+		$animacao.play("direita")
+	elif velocity.x < 0:
+		$animacao.play("esquerda")
 
 
 

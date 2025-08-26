@@ -49,7 +49,7 @@ script = ExtResource("1_a8sqr")
 [node name="animacao" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_11qbu")
-animation = &"cima"
+animation = &"baixo"
 
 [node name="colisao" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_24tl7")

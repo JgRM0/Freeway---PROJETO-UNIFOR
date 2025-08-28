@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7etposhbi7aa"
-path="res://.godot/imported/sprite_1.png-0e5da27245a6ddcee13c7be55b15f91c.ctex"
+uid="uid://bv54d0v11obwu"
+path="res://.godot/imported/gato 9.png-81d96b8e813232e8dc840f33e7c1936e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Material Freeway/Material Freeway/galinha/baixo/sprite_1.png"
-dest_files=["res://.godot/imported/sprite_1.png-0e5da27245a6ddcee13c7be55b15f91c.ctex"]
+source_file="res://Material Freeway/Material Freeway/galinha/esquerda/gato 9.png"
+dest_files=["res://.godot/imported/gato 9.png-81d96b8e813232e8dc840f33e7c1936e.ctex"]
 
 [params]
 

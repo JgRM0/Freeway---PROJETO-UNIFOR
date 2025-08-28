@@ -37,13 +37,12 @@ func _process(delta: float) -> void:
 		$animacao.play("baixo")
 	elif velocity.y < 0:
 		$animacao.play("cima")
-	else:
-		$animacao.stop()
 	if velocity.x > 0:
 		$animacao.play("direita")
 	elif velocity.x < 0:
 		$animacao.play("esquerda")
-
+	if velocity == Vector2.ZERO:
+		$animacao.stop()
 
 
 

@@ -29,27 +29,27 @@ func _on_timer_carros_lentos_timeout() -> void:
 	carro.position = Vector2(-10, pista_y)
 	carro.set_linear_velocity(Vector2(randi_range(300, 310), 0))
 	carro.set_linear_damp(0.0)
-	
+	 
 func _on_player_pontua() -> void:
 	if score <= 10:
 		score += 1
-		$HUD/Placar.text = str(score)
-		$AudioPonto.play()
-		$Player.position = $Player.posicao_inicial
+		$hud/placar.text = str(score)
+		$audioPonto.play()
+		$player.position = $player.posicao_inicial
 	if score == 10:
-		$HUD/Mensagem.show()
-		$HUD/Button.show()
-		$TimerCarrosRapidos.stop()
-		$TimerCarrosLentos.stop()
-		$AudioTema.stop()
-		$AudioVitoria.play()
-		$Player.speed = 0
+		$hud/mensagem.show()
+		$hud/button.show()
+		$timerCarrosRapidos.stop()
+		$timerCarrosLentos.stop()
+		$audioTema.stop()
+		$audioVitoria.play()
+		$player.speed = 0
 
 func _on_hud_reinicia() -> void:
 	score = 0
-	$HUD/Mensagem.hide()
-	$HUD/Placar.text = str(score)
-	$HUD/Button.hide()
-	$TimerCarrosRapidos.start()
-	$TimerCarrosLentos.start()
-	$AudioTema.play()
+	$hud/mensagem.hide()
+	$hud/placar.text = str(score)
+	$hud/button.hide()
+	$timerCarrosRapidos.start()
+	$timerCarrosLentos.start()
+	$audioTema.play()

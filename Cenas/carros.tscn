@@ -146,12 +146,12 @@ sprite_frames = SubResource("SpriteFrames_mimgl")
 animation = &"carro9"
 
 [node name="colisao" type="CollisionShape2D" parent="."]
-position = Vector2(4.00001, 1.99999)
+position = Vector2(5.00001, 3.99998)
 shape = SubResource("RectangleShape2D_okc0r")
 debug_color = Color(0.136373, 0.564838, 0.842244, 0.42)
 
 [node name="notificador" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(4.00002, 3.99997)
+position = Vector2(5.00001, 3.99998)
 scale = Vector2(1.6831, 2.46601)
 
 [connection signal="screen_exited" from="notificador" to="." method="_on_notificador_screen_exited"]
